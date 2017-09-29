@@ -4,11 +4,20 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
+//import { firebaseServices } from '../services/firebase.services'
+//import { firebaseConfig } from '../services/firebaseConfig'
+//import * as firebase from 'firebase';
+
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
   rootPage:any = HomePage;
+
+ /* openPage(pagedtl: string){
+    console.log(pagedtl);
+    this.navCtrl.push(pagedtl);
+  }*/
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {
@@ -18,5 +27,9 @@ export class MyApp {
       splashScreen.hide();
     });
   }
+
+  //firebase.auth().onAuthStateChanged((user)) 
+
+
 }
 

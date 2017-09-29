@@ -1,0 +1,59 @@
+<!--
+  Generated template for the AddItemsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="dark">
+    <button ion-button menuToggle icon-only>
+      <ion-icon name='menu'></ion-icon>
+    </button>
+    <ion-title>
+      Home
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-menu [content]="content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Home</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+      <ion-list>
+      <button ion-item (click)="openPage('Tabs1Page')">
+        Tab1
+      </button>
+    </ion-list>
+    <ion-list>
+      <button ion-item (click)="openPage('Tabs2Page')">
+        Tab2
+      </button>
+    </ion-list>
+    <ion-list>
+      <button ion-item (click)="doLogout()">
+        LogOut
+      </button>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<ion-nav [root]="rootPage" #content></ion-nav>
+
+<ion-content >
+<ion-card class ="card-page">
+  <ion-card-content>
+     Welcome to ionic. Let's see what we got in here!!! 
+     The CSS box model is essentially a box that wraps around every HTML element. It consists of: borders, padding, margins, and the actual content.
+  </ion-card-content>
+
+ <div class ="card-subtitle">
+    Dark outline
+ </div>
+
+ </ion-card>
+
+</ion-content>
+
